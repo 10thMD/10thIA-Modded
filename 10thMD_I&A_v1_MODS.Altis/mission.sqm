@@ -231,7 +231,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="s44";
+					text="med1";
 					description="Alpha Medic";
 				};
 				class Item2
@@ -346,7 +346,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="s34";
+					text="med7";
 					description="Bravo Medic";
 				};
 				class Item2
@@ -461,7 +461,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="s29";
+					text="med8";
 					description="Charlie Medic";
 				};
 				class Item2
@@ -576,7 +576,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="s12";
+					text="med9";
 					description="Delta Medic";
 				};
 				class Item2
@@ -683,14 +683,14 @@ class Mission
 				class Item1
 				{
 					position[]={15283.942,17.862354,17400.348};
-					azimut=398.43549;
+					azimut=398.435;
 					special="NONE";
 					id=33;
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="s55";
+					text="med3";
 					description="Echo Medic";
 				};
 				class Item2
@@ -863,7 +863,7 @@ class Mission
 					vehicle="B_recon_medic_F";
 					player="PLAY CDG";
 					skill=0.2;
-					text="s58";
+					text="med6";
 					description="Recon Paramedic";
 				};
 				class Item2
@@ -1105,7 +1105,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
-					text="s64";
+					text="med10";
 					init="(group this) setGroupId [""CLS""];";
 					description="CLS Team Leader";
 				};
@@ -1120,7 +1120,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.44999999;
-					text="s66";
+					text="med11";
 					description="CLS Autorifleman";
 				};
 				class Item2
@@ -1133,7 +1133,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					text="s65";
+					text="med4";
 					description="CLS Medic";
 				};
 				class Item3
@@ -1146,7 +1146,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					text="s67";
+					text="med5";
 					description="CLS Medic";
 				};
 			};
@@ -2099,6 +2099,8 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={1,3,2};
 				};
 			};
 		};
@@ -2117,7 +2119,7 @@ class Mission
 						items=2;
 						class Item0
 						{
-							value="""B_Medic_F""";
+							value="med1,med2,med3,med4,med5,med6,med7,med8,med9,med10,med11";
 							parentCls="cse_assignMedicRoles_CMS";
 							typeName="EnableList";
 						};
@@ -2181,7 +2183,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=996;
+		items=997;
 		class Item0
 		{
 			position[]={11584.9,23.361359,11913.601};
@@ -6697,6 +6699,8 @@ class Mission
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this allowDamage false;";
+			syncId=1;
+			synchronizations[]={0};
 		};
 		class Item472
 		{
@@ -11600,6 +11604,8 @@ class Mission
 			skill=1;
 			text="Medivac_LZ";
 			init="this allowDamage false;";
+			syncId=2;
+			synchronizations[]={0};
 		};
 		class Item925
 		{
@@ -11613,6 +11619,8 @@ class Mission
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this allowDamage false;";
+			syncId=3;
+			synchronizations[]={0};
 		};
 		class Item926
 		{
@@ -11784,8 +11792,8 @@ class Mission
 			skill=0.60000002;
 			text="CAS";
 			init="0 = [this,600,FALSE,QS_fnc_vSetup02] spawn QS_fnc_vMonitor;";
-			syncId=0;
-			synchronizations[]={0};
+			syncId=4;
+			synchronizations[]={4};
 		};
 		class Item943
 		{
@@ -12351,6 +12359,18 @@ class Mission
 			skill=0.60000002;
 			text="medBox_1";
 			init="this allowDamage false; this enablesimulation false; clearItemCargoGlobal this;";
+		};
+		class Item996
+		{
+			position[]={15278.15,17.841457,17413.768};
+			azimut=-136.739;
+			special="NONE";
+			id=1087;
+			side="EMPTY";
+			vehicle="B_supplyCrate_F";
+			skill=0.44999999;
+			text="medItemBox";
+			init="this allowDamage false; this enablesimulation false;";
 		};
 	};
 	class Markers
